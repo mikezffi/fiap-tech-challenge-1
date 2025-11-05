@@ -3,7 +3,7 @@
   "functions": {
     "api/*.py": {
       "runtime": "python3.11",
-      "includeFiles": ["data/extracted_data.csv"]
+      "includeFiles": "data/**"
     }
   }
 }
