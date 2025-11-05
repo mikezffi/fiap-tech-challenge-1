@@ -189,15 +189,14 @@ GET /api/v1/stats/overview
 
 ```mermaid
 graph TD
-    A[Usuário/Cliente] -->|HTTP Requests| B[API FastAPI (Vercel)]
-    B -->|Consulta| C[Camada de Dados (Pandas/CSV)]
-    C -->|Arquivo| D[data/extracted_data.csv]
-    B -->|Rotas| E[api/api_v1.py]
-    E --> F[models.py]
-    B -->|Entrypoint| G[index.py]
-    G --> E
-    B -->|Documentação| H[Swagger UI /docs]
-    B -->|Deploy| I[Vercel Cloud]
+    A[Client] -->|HTTP requests| B[FastAPI App]
+    B -->|Routes| C[api/api_v1.py]
+    C --> D[models.py]
+    B -->|Data| E[Pandas CSV]
+    E --> F[data/extracted_data.csv]
+    B -->|Entrypoint| G[api/index.py]
+    B -->|Docs| H[Swagger UI docs]
+    B -->|Deploy| I[Vercel]
 ```
 
 ## Entrega
